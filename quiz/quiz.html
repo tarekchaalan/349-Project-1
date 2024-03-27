@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="quiz.css" />
+    <title>Multiple Choice Quiz</title>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Spring 2024 CPSC 349-01 19339 &nbsp; > &nbsp; Exam 1</h1>
+      <hr />
+      <ul>
+        Welcome to Exam 1. Please read the following instructions carefully:
+        <li>There are 10 questions.</li>
+        <li>The time limit is 10 minutes.</li>
+        <li>You can attempt this quiz as much as you want.</li>
+      </ul>
+    </div>
+    <div class="quiz-summary-container">
+      <div class="quiz-summary">
+        <p>Time Remaining: <span id="time">10:00</span></p>
+        <ul id="question-status" class="question-status">
+          <!-- These will be populated by JavaScript -->
+        </ul>
+      </div>
+    </div>
+    <form id="quiz-form">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Question #1
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>What does CSS stand for?</strong> <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q1"
+                  id="q1-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q1-option1">
+                  Computer Style Sheets
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q1"
+                  id="q1-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q1-option2">
+                  Creative Style Sheets
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q1"
+                  id="q1-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q1-option3">
+                  Cascading Style Sheets
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q1"
+                  id="q1-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q1-option4">
+                  Colorful Style Sheets
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Question #2
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong
+                >Which HTML element is used for defining a list that is
+                unordered?</strong
+              >
+              <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q2"
+                  id="q2-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q2-option1">
+                  &lt;ul&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q2"
+                  id="q2-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q2-option2">
+                  &lt;ol&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q2"
+                  id="q2-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q2-option3">
+                  &lt;li&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q2"
+                  id="q2-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q2-option4">
+                  &lt;dl&gt;
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Question #3
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong
+                >What is the purpose of the <code>&lt;div&gt;</code> tag in
+                HTML?</strong
+              >
+              <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q3"
+                  id="q3-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q3-option1">
+                  To create a link
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q3"
+                  id="q3-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q3-option2">
+                  To emphasize text
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q3"
+                  id="q3-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q3-option3">
+                  To create a section or a container for content
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q3"
+                  id="q3-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q3-option4">
+                  To define a list item
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              Question #4
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>Which of the following is a JavaScript data type?</strong>
+              <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q4"
+                  id="q4-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q4-option1">
+                  Element
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q4"
+                  id="q4-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q4-option2">
+                  Object
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q4"
+                  id="q4-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q4-option3"> Tag </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q4"
+                  id="q4-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q4-option4">
+                  Attribute
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              Question #5
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>How do you insert a comment in a CSS file?</strong> <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q5"
+                  id="q5-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q5-option1">
+                  // this is a comment
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q5"
+                  id="q5-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q5-option2">
+                  &lt;!-- this is a comment --&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q5"
+                  id="q5-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q5-option3">
+                  /* this is a comment */
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q5"
+                  id="q5-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q5-option4">
+                  # this is a comment
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              Question #6
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong
+                >What is the correct HTML for adding a background color?</strong
+              >
+              <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q6"
+                  id="q6-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q6-option1">
+                  &lt;body style="background-color:green;"&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q6"
+                  id="q6-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q6-option2">
+                  &lt;background&gt;green&lt;/background&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q6"
+                  id="q6-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q6-option3">
+                  &lt;body bg="green"&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q6"
+                  id="q6-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q6-option4">
+                  &lt;body color="green"&gt;
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven"
+              aria-expanded="false"
+              aria-controls="collapseSeven"
+            >
+              Question #7
+            </button>
+          </h2>
+          <div
+            id="collapseSeven"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong
+                >Which of the following is NOT a valid JavaScript variable
+                name?</strong
+              >
+              <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q7"
+                  id="q7-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q7-option1">
+                  2names
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q7"
+                  id="q7-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q7-option2">
+                  _first_name
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q7"
+                  id="q7-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q7-option3">
+                  FirstAndLast
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q7"
+                  id="q7-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q7-option4">
+                  None of the above
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseEight"
+              aria-expanded="false"
+              aria-controls="collapseEight"
+            >
+              Question #8
+            </button>
+          </h2>
+          <div
+            id="collapseEight"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong
+                >How do you select an element with <code>id="demo"</code> in
+                CSS?</strong
+              >
+              <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q8"
+                  id="q8-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q8-option1"> demo </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q8"
+                  id="q8-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q8-option2"> #demo </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q8"
+                  id="q8-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q8-option3"> .demo </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q8"
+                  id="q8-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q8-option4">
+                  demo()
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseNine"
+              aria-expanded="false"
+              aria-controls="collapseNine"
+            >
+              Question #9
+            </button>
+          </h2>
+          <div
+            id="collapseNine"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong
+                >Which HTML tag is used to display a row in a table?</strong
+              >
+              <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q9"
+                  id="q9-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q9-option1">
+                  &lt;td&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q9"
+                  id="q9-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q9-option2">
+                  &lt;th&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q9"
+                  id="q9-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q9-option3">
+                  &lt;tr&gt;
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q9"
+                  id="q9-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q9-option4">
+                  &lt;table&gt;
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTen"
+              aria-expanded="false"
+              aria-controls="collapseTen"
+            >
+              Question #10
+            </button>
+          </h2>
+          <div
+            id="collapseTen"
+            class="accordion-collapse collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>Which statement is true about JavaScript?</strong> <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q10"
+                  id="q10-option1"
+                  value="1"
+                />
+                <label class="form-check-label" for="q10-option1">
+                  It can only run in the browser
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q10"
+                  id="q10-option2"
+                  value="2"
+                />
+                <label class="form-check-label" for="q10-option2">
+                  It is the same as Java
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q10"
+                  id="q10-option3"
+                  value="3"
+                />
+                <label class="form-check-label" for="q10-option3">
+                  It can modify HTML and CSS
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q10"
+                  id="q10-option4"
+                  value="4"
+                />
+                <label class="form-check-label" for="q10-option4">
+                  It cannot perform networking tasks
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <script src="quiz.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

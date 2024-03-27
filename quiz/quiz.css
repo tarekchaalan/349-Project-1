@@ -1,0 +1,93 @@
+html {
+  height: 100%;
+}
+
+body {
+  transform: scale(0.9);
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #8363a1 0%, #74a8c3 100%);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.quiz-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 875px;
+  background-color: white;
+  margin-top: -20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.quiz-summary-container {
+  flex-direction: column;
+  align-items: center;
+  right: 125px;
+  width: 250px;
+  z-index: 1000;
+}
+.quiz-summary {
+  position: fixed;
+  top: 20%;
+  right: 125px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #313131;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  font-size: large;
+  font-weight: 500;
+}
+.question-status {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.question-status li {
+  margin: 5px 0;
+  color: #000; /* Default color, change as needed */
+}
+.unanswered {
+  color: rgb(255, 0, 0) !important;
+  text-decoration: underline; /* Only unanswered questions are underlined */
+  cursor: pointer; /* Indicates clickable items */
+}
+.answered {
+  color: rgb(0, 255, 0) !important;
+  cursor: pointer; /* Indicates clickable items, but no underline */
+}
+.form-check-label {
+  margin-left: 10px;
+}
+.accordion-button {
+  background-color: #575757;
+  border-color: #575757;
+  color: white;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #575757;
+  color: white;
+}
+.accordion-body {
+  font-size: 16px;
+}
+.button-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.btn-primary {
+  background-color: #575757;
+  border-color: #575757;
+  position: relative;
+}
+#accordionExample {
+  margin: 0 auto;
+  max-width: 875px;
+}
