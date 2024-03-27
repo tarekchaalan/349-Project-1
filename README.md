@@ -15,7 +15,9 @@ Quiz app with dynamic scoring, results display, and retake functionality built w
 - CSS3
 - JavaScript
 
-## Setup (Copy & Paste the command into your device's Terminal or Command Prompt
+## Setup 
+### Copy & Paste the specified command into your CLI
+
 ### Mac
 ```$
 git clone https://github.com/tarekchaalan/349-Project-1.git && cd 349-Project-1 && open auth/main.html
