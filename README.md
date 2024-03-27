@@ -6,8 +6,8 @@ Quiz app with dynamic scoring, results display, and retake functionality built w
 
 ## Team 
 - Tarek Chaalan (tchaalan23@csu.fullerton.edu)
-- Joshua Lee ()
-- Adam Louie ()
+- Joshua Lee (send me ur email)
+- Adam Louie (adumyumyum@csu.fullerton.edu)
 
 ## Technologies Used
 
