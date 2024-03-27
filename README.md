@@ -17,14 +17,14 @@ Quiz app with dynamic scoring, results display, and retake functionality built w
 
 ## Setup (Copy & Paste the command into your device's Terminal or Command Prompt
 ### Mac
-```zsh
+```$
 git clone https://github.com/tarekchaalan/349-Project-1.git && cd 349-Project-1 && open auth/main.html
 ```
 ### Windows
-```zsh
+```$
 git clone https://github.com/tarekchaalan/349-Project-1.git && cd 349-Project-1 && start auth/main.html
 ```
 ### Linux
-```zsh
+```$
 git clone https://github.com/tarekchaalan/349-Project-1.git && cd 349-Project-1 && xdg-open auth/main.html
 ```
