@@ -4,6 +4,11 @@
 
 Quiz app with dynamic scoring, results display, and retake functionality built with HTML, CSS, and JavaScript.
 
+## Team 
+- Tarek Chaalan (tchaalan23@csu.fullerton.edu)
+- Joshua Lee ()
+- Adam Louie ()
+
 ## Technologies Used
 
 - HTML5
