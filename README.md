@@ -15,13 +15,16 @@ Quiz app with dynamic scoring, results display, and retake functionality built w
 - CSS3
 - JavaScript
 
-## Setup
-
-1. Open your Terminal (mac/linux) or CMD (windows)
-2. Clone the repository to your local machine.
+## Setup (Copy & Paste the command into your device's Terminal or Command Prompt
+### Mac
 ```zsh
-git clone https://github.com/tarekchaalan/349-Project-1.git
+git clone https://github.com/tarekchaalan/349-Project-1.git && cd 349-Project-1 && open auth/main.html
 ```
-3. Double click on `..\349-Project-1\auth\main.html` to open it in your default browser.
-4. Select answers and submit to see your results.
-5. Use the "Retake Quiz" button to try again.
+### Windows
+```zsh
+git clone https://github.com/tarekchaalan/349-Project-1.git && cd 349-Project-1 && start auth/main.html
+```
+### Linux
+```zsh
+git clone https://github.com/tarekchaalan/349-Project-1.git && cd 349-Project-1 && xdg-open auth/main.html
+```
