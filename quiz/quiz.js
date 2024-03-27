@@ -1,8 +1,10 @@
+// Event listener to initialize quiz and timer when the DOM content is loaded
 document.addEventListener("DOMContentLoaded", function () {
   initializeQuiz();
   initializeTimer();
 });
 
+// Function to initialize the quiz
 function initializeQuiz() {
   const questionStatusList = document.getElementById("question-status");
   populateQuestionStatusList(questionStatusList);
@@ -12,6 +14,7 @@ function initializeQuiz() {
     .addEventListener("submit", handleQuizSubmission);
 }
 
+// Function to populate the question status list
 function populateQuestionStatusList(questionStatusList) {
   for (let i = 1; i <= 10; i++) {
     const li = document.createElement("li");
@@ -27,6 +30,7 @@ function populateQuestionStatusList(questionStatusList) {
   }
 }
 
+// Function to open the corresponding accordion for a clicked question status
 function openCorrespondingAccordion(questionNumber) {
   // Find the accordion button that corresponds to the clicked question status
   const accordionButton = document.querySelector(
@@ -40,6 +44,7 @@ function openCorrespondingAccordion(questionNumber) {
   accordionButton.click();
 }
 
+// Function to add answer selection listeners to quiz questions
 function addAnswerSelectionListeners() {
   const accordionItems = document.getElementsByClassName("accordion-item");
   Array.from(accordionItems).forEach((item, index) => {
@@ -77,6 +82,7 @@ function addAnswerSelectionListeners() {
   });
 }
 
+// Function to update the status of a question based on the selected answer
 function updateQuestionStatus(questionNumber, selectedValue) {
   document.getElementById(`status-${questionNumber}`).className = "answered";
   document.getElementById(
@@ -87,22 +93,14 @@ function updateQuestionStatus(questionNumber, selectedValue) {
   )} > Option ${selectedValue.toUpperCase()}`;
 }
 
-function updateQuestionStatus(questionNumber, selectedValue) {
-  document.getElementById(`status-${questionNumber}`).className = "answered";
-  document.getElementById(
-    `status-${questionNumber}`
-  ).textContent = `Question ${questionNumber.replace(
-    "q",
-    ""
-  )} > Option ${selectedValue.toUpperCase()}`;
-}
-
+// Function to handle quiz submission
 function handleQuizSubmission(event) {
   event.preventDefault();
   const scores = calculateScore();
   saveScoreAndRedirect(scores);
 }
 
+// Function to calculate the quiz score based on selected answers
 function calculateScore() {
   const correctAnswers = {
     q1: "3",
@@ -130,22 +128,23 @@ function calculateScore() {
   return { score, totalQuestions: Object.keys(correctAnswers).length };
 }
 
+// Function to save the quiz score and redirect to the results page
 function saveScoreAndRedirect(scores) {
   localStorage.setItem("quizScore", scores.score);
   localStorage.setItem("totalQuestions", scores.totalQuestions);
   window.location.href = "../results/results.html";
 }
 
-// Timer functionality
+// Function to initialize the timer for the quiz
 function initializeTimer() {
   const timeDisplay = document.getElementById("time");
-  //   localStorage.removeItem("startTime");
   if (!localStorage.getItem("startTime")) {
     localStorage.setItem("startTime", Date.now());
   }
   startTimerFromSavedPoint(timeDisplay);
 }
 
+// Function to start the timer from the saved point
 function startTimerFromSavedPoint(timeDisplay) {
   const totalDuration = 600; // 10 minutes in seconds
   const startTime = parseInt(localStorage.getItem("startTime"), 10);
@@ -159,9 +158,10 @@ function startTimerFromSavedPoint(timeDisplay) {
   }
 }
 
+// Function to start the countdown timer
 function startTimer(duration, display) {
   let timer = duration;
-  updateTimerDisplay(timer, display); // Ensure the timer is updated immediately before starting interval
+  updateTimerDisplay(timer, display);
 
   const interval = setInterval(() => {
     timer--;
@@ -174,6 +174,7 @@ function startTimer(duration, display) {
   }, 1000);
 }
 
+// Function to update the timer display with minutes and seconds
 function updateTimerDisplay(timer, display) {
   const minutes = parseInt(timer / 60, 10);
   const seconds = parseInt(timer % 60, 10);
@@ -182,8 +183,9 @@ function updateTimerDisplay(timer, display) {
   }${seconds}`;
 }
 
+// Function to handle when the timer reaches zero
 function handleTimeUp() {
   console.log("Time is up!");
   alert("Time is up! Submitting quiz.");
-  handleQuizSubmission(new Event("submit")); // Programmatically submit the quiz, adjust as needed for your application
+  handleQuizSubmission(new Event("submit"));
 }

@@ -1,5 +1,8 @@
+// Execute the displayResults function once the DOM content is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   displayResults();
+
+  // Add event listener to the restart button to clear localStorage and redirect to the quiz page
   document
     .getElementById("restart-button")
     .addEventListener("click", function () {
@@ -8,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Function to display the quiz results on the page
 function displayResults() {
   const score = localStorage.getItem("quizScore");
   const totalQuestions = localStorage.getItem("totalQuestions");

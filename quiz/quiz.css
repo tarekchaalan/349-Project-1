@@ -48,7 +48,7 @@ body {
 }
 .question-status li {
   margin: 5px 0;
-  color: #000; /* Default color, change as needed */
+  color: #000;
 }
 .unanswered {
   color: rgb(255, 0, 0) !important;
