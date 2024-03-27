@@ -18,6 +18,6 @@ Quiz app with dynamic scoring, results display, and retake functionality built w
 ## Setup
 
 1. Clone the repository to your local machine.
-2. Open `auth\main.html` in your browser to start the quiz.
+2. Open `..\349-Project-1\auth\main.html` in your browser to start the quiz.
 3. Select answers and submit to see your results.
 4. Use the "Retake Quiz" button to try again.
