@@ -14,10 +14,14 @@
   </head>
   <body>
     <div class="quiz-intro">
-      <h1>Spring 2024 CPSC 349-01 19339 &nbsp; > &nbsp; Exam 1</h1>
+      <h1 id="intro-header">
+        Spring 2024 CPSC 349-01 19339 &nbsp; > &nbsp; Exam 1
+      </h1>
       <hr />
       <ul>
-        Welcome to Exam 1. Please read the following instructions carefully:
+        <h3>
+          Welcome to Exam 1. Please read the following instructions carefully:
+        </h3>
         <li>There are 10 questions.</li>
         <li>The time limit is 10 minutes.</li>
         <li>You can attempt this quiz as much as you want.</li>
@@ -26,7 +30,6 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-9 quiz-content">
-
           <form id="quiz-form">
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
@@ -197,8 +200,8 @@
                 >
                   <div class="accordion-body">
                     <strong
-                      >What is the purpose of the <code>&lt;div&gt;</code> tag in
-                      HTML?</strong
+                      >What is the purpose of the <code>&lt;div&gt;</code> tag
+                      in HTML?</strong
                     >
                     <br />
                     <div class="form-check">
@@ -272,7 +275,9 @@
                   data-bs-parent="#accordionExample"
                 >
                   <div class="accordion-body">
-                    <strong>Which of the following is a JavaScript data type?</strong>
+                    <strong
+                      >Which of the following is a JavaScript data type?</strong
+                    >
                     <br />
                     <div class="form-check">
                       <input
@@ -306,7 +311,9 @@
                         id="q4-option3"
                         value="3"
                       />
-                      <label class="form-check-label" for="q4-option3"> Tag </label>
+                      <label class="form-check-label" for="q4-option3">
+                        Tag
+                      </label>
                     </div>
                     <div class="form-check">
                       <input
@@ -343,7 +350,8 @@
                   data-bs-parent="#accordionExample"
                 >
                   <div class="accordion-body">
-                    <strong>How do you insert a comment in a CSS file?</strong> <br />
+                    <strong>How do you insert a comment in a CSS file?</strong>
+                    <br />
                     <div class="form-check">
                       <input
                         class="form-check-input"
@@ -416,7 +424,8 @@
                 >
                   <div class="accordion-body">
                     <strong
-                      >What is the correct HTML for adding a background color?</strong
+                      >What is the correct HTML for adding a background
+                      color?</strong
                     >
                     <br />
                     <div class="form-check">
@@ -567,8 +576,8 @@
                 >
                   <div class="accordion-body">
                     <strong
-                      >How do you select an element with <code>id="demo"</code> in
-                      CSS?</strong
+                      >How do you select an element with
+                      <code>id="demo"</code> in CSS?</strong
                     >
                     <br />
                     <div class="form-check">
@@ -579,7 +588,9 @@
                         id="q8-option1"
                         value="1"
                       />
-                      <label class="form-check-label" for="q8-option1"> demo </label>
+                      <label class="form-check-label" for="q8-option1">
+                        demo
+                      </label>
                     </div>
                     <div class="form-check">
                       <input
@@ -589,7 +600,9 @@
                         id="q8-option2"
                         value="2"
                       />
-                      <label class="form-check-label" for="q8-option2"> #demo </label>
+                      <label class="form-check-label" for="q8-option2">
+                        #demo
+                      </label>
                     </div>
                     <div class="form-check">
                       <input
@@ -599,7 +612,9 @@
                         id="q8-option3"
                         value="3"
                       />
-                      <label class="form-check-label" for="q8-option3"> .demo </label>
+                      <label class="form-check-label" for="q8-option3">
+                        .demo
+                      </label>
                     </div>
                     <div class="form-check">
                       <input
@@ -637,7 +652,8 @@
                 >
                   <div class="accordion-body">
                     <strong
-                      >Which HTML tag is used to display a row in a table?</strong
+                      >Which HTML tag is used to display a row in a
+                      table?</strong
                     >
                     <br />
                     <div class="form-check">
@@ -711,7 +727,8 @@
                   data-bs-parent="#accordionExample"
                 >
                   <div class="accordion-body">
-                    <strong>Which statement is true about JavaScript?</strong> <br />
+                    <strong>Which statement is true about JavaScript?</strong>
+                    <br />
                     <div class="form-check">
                       <input
                         class="form-check-input"
@@ -779,6 +796,50 @@
             </div>
           </div>
         </div>
+        <div class="wrapper">
+          <div class="box a">
+            <div class="gradient-text">
+              <h1>Project notes for Professor Kushwaha</h1>
+            </div>
+          </div>
+          <div class="box b">
+            <h3>Interactive Accordion Elements</h3>
+            <p>
+              The quiz-summary box enhances navigation and usability by allowing
+              users to directly select questions from a summary list. This means
+              if a user clicks on a specific question within the quiz-summary
+              box (black box to the right of the accordion), the application
+              dynamically opens the corresponding accordion item, bringing the
+              selected question into focus. This direct interaction encourages
+              users to engage more deeply with the content, revisiting questions
+              to check their answers. Implementing such features requires
+              careful attention to JavaScript event handling and DOM
+              manipulation, ensuring a seamless and responsive user experience.
+            </p>
+          </div>
+          <div class="box c">
+            <h3>Embracing Responsiveness with Bootstrap</h3>
+            <p>
+              Bootstrap, a front-end framework, simplifies creating responsive
+              and mobile-first websites. Utilizing its grid system and
+              pre-defined classes, we can efficiently design websites that adapt
+              seamlessly across various devices and screen sizes.
+            </p>
+          </div>
+          <div class="box d">
+            <h3>Leveraging Local Storage for User Sessions</h3>
+            <p>
+              Local Storage provides a way to store data locally within the
+              user's browser, enabling persistence of login states or time
+              progress, and selected answers. This allows web applications to
+              save key-value pairs, making it easier to enhance the user
+              experience by remembering user preferences and data across
+              sessions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="quiz.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
