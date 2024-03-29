@@ -128,7 +128,7 @@ text gradient:  https://fossheim.io/writing/posts/css-text-gradient/
   display: grid;
   width: 80%;
   margin: 0 auto;
-  grid-gap: 20px;
+  grid-gap: 30px;
   grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [col3-end];
   grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
   color: #333;
@@ -149,7 +149,7 @@ text gradient:  https://fossheim.io/writing/posts/css-text-gradient/
 }
 .box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 .gradient-text h1 {
   font-family: "Archivo Black", sans-serif;
