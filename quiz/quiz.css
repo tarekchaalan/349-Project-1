@@ -83,7 +83,7 @@ body {
   margin-left: 0.625rem;
 }
 .accordion-button {
-  background-color: #575757;
+  background: linear-gradient(25deg, #74a8c3 0%, #8363a1 100%);
   border-color: #575757;
   color: white;
 }
@@ -91,7 +91,6 @@ body {
   box-shadow: none;
 }
 .accordion-button:not(.collapsed) {
-  background-color: #575757;
   color: white;
 }
 .accordion-body {
