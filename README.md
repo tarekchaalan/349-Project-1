@@ -15,7 +15,7 @@ Quiz app with dynamic scoring, results display, and retake functionality built w
 - CSS3
 - JavaScript
 
-## Setup 
+## How to run
 ### Copy & Paste the specified command into your CLI
 
 ### Mac
