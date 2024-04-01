@@ -67,16 +67,28 @@ function addAnswerSelectionListeners() {
           localStorage.setItem(questionNumber, optionIndex);
           updateQuestionStatus(questionNumber, optionIndex);
 
-          // Ensure the accordion for the answered question remains open
+          // Close the current accordion item
           const collapseElementId = item.querySelector(
             ".accordion-collapse"
           ).id;
           const accordionButton = item.querySelector(
             `[data-bs-target="#${collapseElementId}"]`
           );
-          new bootstrap.Collapse(accordionButton.nextElementSibling, {
-            toggle: false,
-          });
+          accordionButton.click();
+
+          // Open the next accordion item if available
+          const nextAccordionItem = document.querySelector(
+            `.accordion-item:nth-child(${index + 2})`
+          );
+          if (nextAccordionItem) {
+            const nextCollapseElementId = nextAccordionItem.querySelector(
+              ".accordion-collapse"
+            ).id;
+            const nextAccordionButton = nextAccordionItem.querySelector(
+              `[data-bs-target="#${nextCollapseElementId}"]`
+            );
+            nextAccordionButton.click();
+          }
         });
       });
   });
