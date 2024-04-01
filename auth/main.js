@@ -17,6 +17,7 @@ document
     // Store username and password in localStorage
     localStorage.setItem(username, password);
     alert("Signup successful. Please log in.");
+    toggleForms(); // auto change to login form
   });
 
 // Handle Login form submission
